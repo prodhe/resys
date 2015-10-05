@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8" />
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <script src="./sys/resys.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./sys/style.css" />
+    <title>Re:sys</title>
+</head>
+<body>
+    <header>
+        <hgroup>
+            <h1><i class="fa fa-table"></i> Re:sys</h1>
+            <small>Backend reservation made simple</small>
+            <div class="btn-group" role="group">
+                <button type="button" class="btn btn-info" onclick="showinfo()" data-name="Information">
+                        <i class="fa fa-fw fa-lg fa-info"></i>
+                        <span>Information</span></button>
+                <button type="button" class="btn btn-info" onclick="showhelp()" data-name="Visa hjälp">
+                        <i class="fa fa-fw fa-lg fa-question"></i>
+                        <span>Visa hjälp</span></button>
+            </div>
+        </hgroup>
+    </header>
+    <main>
+        <section id="impex">
+            <div class="input-group">
+                <div class="input-group-btn">
+                    <button type="button" class="btn btn-default" onclick="exportgrid()" data-name="Exportera till text">
+                        <i class="fa fa-file-text-o"></i>
+                        <span>Exportera</span></button>
+                </div>
+                <input type="text" id="rawdata" class="form-control" value="" />
+                <div class="input-group-btn">
+                    <button type="button" class="btn btn-default" onclick="importgrid()" data-name="Importera">
+                        <i class="fa fa-download"></i>
+                        <span>Importera</span></button>
+                </div>
+            </div>
+        </section>
+        <section id="work">
+            <div id="controlpanel">
+                <div class="btn-toolbar" role="toolbar">
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-primary" onclick="reserve()" data-name="Boka">
+                                <i class="fa fa-fw fa-lg fa-ticket"></i>
+                                <span>Boka</span></button>
+                        <button type="button" class="btn btn-primary" onclick="editreservation()" data-name="Redigera">
+                                <i class="fa fa-fw fa-lg fa-edit"></i>
+                                <span>Redigera</span></button>
+                        <button type="button" class="btn btn-danger" onclick="release()" data-name="Avboka">
+                                <i class="fa fa-fw fa-lg fa-trash-o"></i>
+                                <span>Avboka</span></button>
+                        <button type="button" class="btn btn-primary" onclick="showreservations()" data-name="Visa alla bokningar">
+                                <i class="fa fa-fw fa-lg fa-list-alt"></i>
+                                <span>Visa alla bokningar</span></button>
+                        <button type="button" class="btn btn-primary" onclick="togglefloor()" data-name="Växla bokningsbar">
+                                <i class="fa fa-fw fa-lg fa-adjust"></i>
+                                <span>Växla bokningsbar</span></button>
+                    </div>
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-default" onclick="addrow()" data-name="Lägg till rad">
+                                <i class="fa fa-fw fa-chevron-down"></i>
+                                <span>Lägg till rad</span></button>
+                        <button type="button" class="btn btn-default" onclick="addcol()" data-name="Lägg till kolumn">
+                                <i class="fa fa-fw fa-chevron-right"></i>
+                                <span>Lägg till kolumn</span></button>
+                        <button type="button" class="btn btn-default" onclick="delrow()" data-name="Ta bort rad">
+                                <i class="fa fa-fw fa-chevron-up"></i>
+                                <span>Ta bort rad</span></button>
+                        <button type="button" class="btn btn-default" onclick="delcol()" data-name="Ta bort kolumn">
+                                <i class="fa fa-fw fa-chevron-left"></i>
+                                <span>Ta bort kolumn</span></button>
+                    </div>
+                </div>
+            </div>
+            <table><tbody id="grid"></tbody></table>
+        </section>
+        <div id="infopopup" class="alert alert-info"></div>
+        <div id="respopup">
+                <fieldset>
+                    <label for="formname">Namn</label>
+                    <input type="text" name="formname" id="formname" class="text ui-widget-content ui-corner-all" />
+                </fieldset>
+        </div>
+    </main>
+</body>
+</html>

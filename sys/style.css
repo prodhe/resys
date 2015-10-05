@@ -1,0 +1,121 @@
+/* reservation system */
+
+/* zero */
+html, body, header, ul, li, main, section { padding: 0; margin: 0; border: 0; }
+
+/* baseline */
+html {
+    position: relative;
+    min-height: 100%;
+    font-size: 16px;
+    font-family: "Open Sans", sans-serif;
+    color: #111;
+    line-height: 1.0em;
+}
+
+body {
+    background-color: #fff;
+    font-size: 16px;
+}
+
+#infopopup {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 0.8rem;
+    display: none;
+    z-index: 100;
+    padding: 0.2rem;
+    box-shadow: 0.2rem 0.2rem 0.2rem #888;
+}
+
+#respopup {
+    display: none;
+}
+#respopup label, #respopup input {
+    display: block;
+    width: 98%;
+    font-weight: normal;
+}
+#respopup input {
+    padding: 0.2rem;
+}
+
+.ui-dialog {
+    font-size: 0.8rem;
+}
+
+header {
+    max-width: 100%;
+    padding: 3rem;
+    border-bottom: 1px solid #999;
+    background-color: #efefef;
+}
+header hgroup {
+    max-width: 35rem;
+}
+header small {
+    margin-left: 1.3rem;
+    font-style: italic;
+}
+header div {
+    display: block;
+    float: right;
+}
+
+#impex {
+    padding: 2rem 2rem 0 2rem;
+    max-width: 33rem;
+}
+#work {
+    padding: 2rem;
+}
+
+button span {
+    display: none;
+}
+
+table {
+    clear: both;
+    border-collapse: separate;
+    border-spacing: 0.1rem;
+    border: 1px solid #999;
+    padding: 1rem;
+    margin: 1rem 0 0 0;
+    background-color: #fff;
+    box-sizing: content-box;
+}
+
+td {
+    padding: 0.6rem;
+    border: 1px solid #999;
+    background-color: #efefef;
+    width: 1.5rem;
+    height: 1.5rem;
+    text-align: center;
+    box-sizing: content-box;
+}
+td:hover {
+    border-color: #000;
+}
+td.ui-selecting {
+    background-color: #dedede;
+}
+td.ui-selected {
+    background-color: #efefef;
+}
+
+td.floor {
+    background-color: #fff;
+    border: 1px solid #fff;
+}
+td.floor:hover {
+    border-color: #000;
+}
+
+td.reserved {
+    background-color: #e1abab;
+}
+
+td.selected {
+}
