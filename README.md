@@ -13,7 +13,7 @@ Libraries used:
 - Bootstrap
 - Font Awesome
 
-Live demo can be found at [https://vargklippan.se/resys/](https://vargklippan.se/resys/).
+Live demo can be found at [https://prodhe.github.io/resys/](https://prodhe.github.io/resys/).
 
 ## Language disclaimer
 
